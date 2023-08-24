@@ -123,12 +123,12 @@ exports.getUsers = async (req, res) => {
         let token = req.token
         let user = await User.findOne({ _id: token._id }).lean()
 
-        if (user && (user.role == 'SuperAdmin')) {
-            let result = await User.find({role:'Admin'}).lean()
+        if (user && (user.role == 'Staff')) {
+            let result = await User.find({role:'User'}).lean()
             if (result) {
-                let Activitylog = new ActivityLogs({ userId: token._id, Activity_name: "Got all Admin", Module_name: "Admin", Role: result.role, Result: result })
+                let Activitylog = new ActivityLogs({ userId: token._id, Activity_name: "Got all Users", Module_name: "Users", Role: result.role, Result: result })
                 await Activitylog.save()
-                return res.status(200).send({ statusCode: 200, message: `Successfully Got all Admin`, Result: result })
+                return res.status(200).send({ statusCode: 200, message: `Successfully Got all Users`, Result: result })
             }
 
             else
@@ -196,7 +196,6 @@ exports.logout = async (req, res) => {
         let user = await User.findOne({ _id: token._id }).lean()
       
         if (user && (user.role == 'Attendee'|| user.role=='Admin'|| user.role=='SuperAdmin')) {        
-                 let notification =   await PushNotification.findOneAndDelete({fcm_token:req.body.fcm_token})
                  
                     let Activitylog = new ActivityLogs({ userId: token._id, Activity_name: "Logged Out", Module_name: "Logout", Role: user.role })
                     await Activitylog.save()
@@ -273,4 +272,41 @@ exports.resetpassword =  async(req, res) => {
 
 }
 
+}
+
+exports.updateProfile = async (req, res) => {
+    try {
+        let token = req.token
+        const find = req.params.id
+        let user = await User.findOne({ _id: token._id }).lean()
+        if (user && user.role == 'User' ) {
+            let data = await User.findById(find)
+            if (req?.files?.image) {
+                if (data.image) await deletefile(data.image)
+                req.body.image = req.files.image[0].location
+            }
+            let result = await User.findByIdAndUpdate({
+                _id: find, userId: token._id
+            },
+                req.body,
+                { new: true }).lean()
+
+            if (result) {
+                let Activitylog = new ActivityLogs({ userId: token._id, Activity: `Succesfully Updated Profile-${result.Name}`, Module: "User", Role: token.role, data: result })
+                await Activitylog.save()
+                return res.status(200).send({ statusCode: 200, message: `Successfully Updated Profile-${result.Name}`, Result: result })
+            }
+           
+
+        else {
+            return res.status(200).json({statusCode:500, message: 'Something Went Wrong'})
+        }
+      } else {
+        return res.status(200).json({statusCode:404, message: 'UNAUTHORIZED USER'})
+    }
+
+} catch (error) {
+    return res.status(200).json({statusCode: 400, message: "something went wrong", result: error.message })
+
+}
 }
