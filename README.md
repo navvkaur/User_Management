@@ -1,5 +1,6 @@
-##Project Explanation - 
-###"User Management" project aims to create a web application that facilitates user registration and profile management, while providing staff members with tools to view and manage user data efficiently. As a full-stack developer, I'll be responsible for building both the frontend and backend components of the application. Here's a step-by-step breakdown of the project:
+## Project Explanation - 
+
+### "User Management" project aims to create a web application that facilitates user registration and profile management, while providing staff members with tools to view and manage user data efficiently. As a full-stack developer, I'll be responsible for building both the frontend and backend components of the application. Here's a step-by-step breakdown of the project:
 
 1. User Registration:
 Users can create accounts by providing their personal information such as name, email, and password.
