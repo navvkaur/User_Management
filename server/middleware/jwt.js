@@ -37,6 +37,4 @@ exports.decodeToken = (req, res, next) => {
     }
 }
 
-// module.exports={
-//     generateAuthJwt
-// }
+

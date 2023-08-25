@@ -13,7 +13,7 @@ require('dotenv').config()
 
 //CORS 
 var corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: '*',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   preflightContinue: false
 }

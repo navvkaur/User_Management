@@ -5,12 +5,7 @@ const tokenverification = require('../../../middleware/jwt')
 const Upload = require('../../../middleware/upload');
 
 router.post('/login',userController.login);
-// router.post('/resetpassword',tokenverification.decodeToken,userController.resetPassword)
 router.get('/users',tokenverification.decodeToken,userController.getUsers)
-// router.post('/changepassword',tokenverification.decodeToken,userController.changepassword)
-// router.post('/logout',tokenverification.decodeToken,userController.logout)
-// router.post('/forgotPassword',userController.forgotPassword)
-// router.post('/reset-password/:id',userController.resetpassword)
-router.patch('/register/:id',tokenverification.decodeToken,Upload.uploadImage,userController.updateProfile)
-
+router.patch('/updateProfile/:id',tokenverification.decodeToken,Upload.uploadImage,userController.updateProfile)
+router.post('/register', Upload.uploadImage , userController.addUser)
 module.exports = router;

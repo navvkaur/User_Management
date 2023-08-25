@@ -9,16 +9,14 @@ exports.autoMail = async (to, subject, html) => {
     port: 587,
     secure: true,
     auth: {
-      user: 'eventplus2023@gmail.com',
-      pass: 'vxqbtrgrhuvuilaj'
-      // user: process.env.EMAIL,
-      // pass: process.env.EPASS
+      user: process.env.EMAIL,
+      pass: process.env.EPASS
     }
   })
   //Nodemailer OPTIONS
   
   var mailOptions = {
-    from: '"Event PLus Team" <eventplus2023@gmail.com>',
+    from: '"User Portal Team" <userportal@gmail.com>',
     to: to,
     subject: subject,
     html: html

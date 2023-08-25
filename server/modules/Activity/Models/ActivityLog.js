@@ -17,11 +17,9 @@ const ActivityLogsSchema = new Schema({
     Role:{
         type:String
     },
-    
+    timestamps: {} });
 
-});
-
-
+    ActivityLogsSchema.set('timestamps', true); // this will add createdAt and updatedAt timestamps
 
 const ActivityLogs = mongoose.model('activitylogs',ActivityLogsSchema);
 module.exports = ActivityLogs;

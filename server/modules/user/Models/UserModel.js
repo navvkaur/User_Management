@@ -6,12 +6,9 @@ const userSchema = new Schema({
     email: {
         type:String,
         required:true,
+        unique:true
     },
     
-    isActive: {
-        type: Boolean,
-        default: true
-    },
     Name:{
         type: String,
         
@@ -27,14 +24,7 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
-    logged_times:{
-        type:Number,
-        default :0 
-    },
-    onetimepassword:{
-       type: Boolean,
-    default:true},
-    expireAt:String,
+    
     role: {
         type: String,
         required:true,
@@ -53,23 +43,14 @@ const userSchema = new Schema({
         type:String
   
     },
-    isOnline:{
-        type:Boolean,
-        default : false
-    },
-    schedule:
-        [{
-            type:mongoose.Schema.Types.ObjectId,
-            ref :'agenda',
-            default:[]
-        }],
+    
     image:{
         type: String,
         default: ''
     },
-    interest:{
-        type:[],
-        default:[]
+    file:{
+        type: String,
+        default: ''
     },
     
     linkedln_profile:{
@@ -88,8 +69,9 @@ const userSchema = new Schema({
         type: String,
         default :''
     },
-});
+     timestamps: {} });
 
+     userSchema.set('timestamps', true); // this will add createdAt and updatedAt timestamps
 
 
 const User = mongoose.model('User',userSchema);

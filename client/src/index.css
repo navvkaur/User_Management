@@ -1,13 +1,65 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.images-wrapper :nth-child(5) {
+  z-index: 1;
+  left: 100px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.images-wrapper :nth-child(4) {
+  z-index: 2;
+  left: 75px;
+}
+
+.images-wrapper :nth-child(3) {
+  z-index: 3;
+  left: 50px;
+}
+
+.images-wrapper :nth-child(2) {
+  z-index: 4;
+  left: 25px;
+}
+
+.images-wrapper :nth-child(1) {
+  z-index: 5;
+  left: 0px;
+}
+
+body {
+  background-color: #F6F6F7;
+}
+
+.wrapper-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(./assets/background.jpeg);
+}
+
+.agenda-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(./assets/background.jpeg);
+}
+
+.owl-stage-outer {
+  padding-block: 2rem;
+}
+
+.images-wrapper {
+  position: relative;
+  left: 0;
+  top: 20px;
+}
+.images-wrapper img {
+  position: absolute;
+}
+
+.show {
+  /* display: flex; */
+  top: 0;
+  transition: top 0.4s ease-out;
+}
+
+.hide {
+  /* display: none; */
+  top: -82px;
+  transition: top 0.4s ease-out;
 }

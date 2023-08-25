@@ -1,0 +1,140 @@
+
+  
+  /* Example Styles for React Tags*/
+  
+  .container {
+    margin: auto;
+    width: 40%;
+  }
+  .ReactTags__tags {
+    position: relative;
+  }
+  
+  .ReactTags__clearAll {
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    background-color: #FF8531;
+    color: #fff;
+    border: none;
+  }
+  
+  /* Styles for the input */
+  .ReactTags__tagInput {
+    border-radius: 2px;
+    display: inline-block;
+  }
+  .ReactTags__tagInput input.ReactTags__tagInputField,
+  .ReactTags__tagInput input.ReactTags__tagInputField:focus {
+    height: 34px;
+    margin: 0;
+    font-size: 12px;
+    padding: 4px 12px;
+    border: 1px solid #eee;
+   width: 604px;
+   border-radius: 4px;
+  }
+  
+  .ReactTags__editInput {
+    border-radius: 1px;
+  }
+  
+  .ReactTags__editTagInput {
+    display: inline-flex;
+  }
+  
+  /* Styles for selected tags */
+  .ReactTags__selected span.ReactTags__tag {
+    border: 1px solid #ddd;
+    background: #FF8531;
+    color: white;
+    font-size: 12px;
+    display: inline-block;
+    padding: 4px 5px;
+    margin: 0 2px;
+    border-radius: 8px;
+
+  }
+  .ReactTags__selected a.ReactTags__remove {
+    color: #aaa;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  
+  /* Styles for suggestions */
+  .ReactTags__suggestions {
+    position: absolute;
+  }
+  .ReactTags__suggestions ul {
+    list-style-type: none;
+    box-shadow: 0.05em 0.01em 0.5em rgba(0, 0, 0, 0.2);
+    background: white;
+    width: 200px;
+  }
+  .ReactTags__suggestions li {
+    border-bottom: 1px solid #ddd;
+    padding: 5px 10px;
+    margin: 0;
+  }
+  .ReactTags__suggestions li mark {
+    text-decoration: underline;
+    background: none;
+    font-weight: 600;
+  }
+  .ReactTags__suggestions ul li.ReactTags__activeSuggestion {
+    background: #b7cfe0;
+    cursor: pointer;
+  }
+  
+  .ReactTags__remove {
+    border: none;
+    cursor: pointer;
+    background: none;
+    padding-left: 6px;
+    color: black;
+  }
+  .profile-pic {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    background-position: bottom;
+    background-blend-mode: multiply;
+    vertical-align: middle;
+    text-align: center;
+    color: transparent;
+    transition: all .3s ease;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 72px;
+    margin-right: 32px;
+    border-color: "#25a451";
+}
+
+.profile-pic:hover {
+    background-color: rgba(0,0,0,.5);
+    z-index: 10000;
+    color: #fff;
+    border-width: 2px;
+    transition: all .3s ease;
+    text-decoration: none;
+    border-color: "#25a451";
+
+}
+
+.profile-pic span {
+    display: inline-block;
+    padding-top: 4.5em;
+    padding-bottom: 4.5em;
+    border-color: "#25a451";
+
+}
+
+.fileToUpload {
+          display: none;
+          cursor: pointer;
+ }
+ 
+
+  
+  
