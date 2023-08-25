@@ -1,5 +1,5 @@
-Project Explanation - 
-# "User Management" project aims to create a web application that facilitates user registration and profile management, while providing staff members with tools to view and manage user data efficiently. As a full-stack developer, I'll be responsible for building both the frontend and backend components of the application. Here's a step-by-step breakdown of the project:
+##Project Explanation - 
+###"User Management" project aims to create a web application that facilitates user registration and profile management, while providing staff members with tools to view and manage user data efficiently. As a full-stack developer, I'll be responsible for building both the frontend and backend components of the application. Here's a step-by-step breakdown of the project:
 
 1. User Registration:
 Users can create accounts by providing their personal information such as name, email, and password.
@@ -44,7 +44,7 @@ Establish secure connections between the backend server and the database.
 Implement secure password handling techniques, such as password hashing and salting.
 Apply input validation and sanitation to prevent common security vulnerabilities like cross-site scripting (XSS).
 
-# Here's a list of the packages used along with a brief explanation of their roles:
+## Here's a list of the packages used along with a brief explanation of their roles:
 
 Express: A popular web application framework for Node.js that simplifies routing, middleware creation, and handling HTTP requests and responses.
 jsonwebtoken (jwt): This package is used for creating and verifying JSON Web Tokens (JWT), which are often employed for user authentication and authorization.
