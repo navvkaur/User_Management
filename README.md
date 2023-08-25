@@ -47,15 +47,27 @@ Apply input validation and sanitation to prevent common security vulnerabilities
 
 ## Here's a list of the packages used along with a brief explanation of their roles:
 
-Express: A popular web application framework for Node.js that simplifies routing, middleware creation, and handling HTTP requests and responses.
-jsonwebtoken (jwt): This package is used for creating and verifying JSON Web Tokens (JWT), which are often employed for user authentication and authorization.
-multer: A middleware for handling multipart/form-data, which is essential for file uploads. In your case, it will be used for users' resume uploads.
-cloudinary: An image and video hosting service that also offers APIs for image and video manipulation. You'll use this package to manage user resume files stored in the cloud.
-helmet: A package that helps secure your Express application by setting various HTTP headers that enhance security and protect against common vulnerabilities.
-cors: Middleware that enables Cross-Origin Resource Sharing (CORS) on the server. It's important for handling requests from different domains.
-morgan: A logging middleware that provides information about incoming requests, which is helpful for debugging and monitoring.
-dotenv: A package that loads environment variables from a .env file into process.env, allowing you to keep sensitive data separate from your codebase.
-nodemailer: A package for sending email from Node.js applications. This will be used to send confirmation emails, password reset emails, etc.
+1. Express: A popular web application framework for Node.js that simplifies routing, middleware creation, and handling HTTP requests and responses.
+
+2. jsonwebtoken (jwt): This package is used for creating and verifying JSON Web Tokens (JWT), which are often employed for user authentication and authorization.
+
+3. multer: A middleware for handling multipart/form-data, which is essential for file uploads. In your case, it will be used for users' resume uploads.
+
+4. cloudinary: An image and video hosting service that also offers APIs for image and video manipulation. You'll use this package to manage user resume files stored in the cloud.
+
+5. helmet: A package that helps secure your Express application by setting various HTTP headers that enhance security and protect against common vulnerabilities.
+
+6. cors: Middleware that enables Cross-Origin Resource Sharing (CORS) on the server. It's important for handling requests from different domains.
+
+7. morgan: A logging middleware that provides information about incoming requests, which is helpful for debugging and monitoring.
+
+8. dotenv: A package that loads environment variables from a .env file into process.env, allowing you to keep sensitive data separate from your codebase.
+
+9. nodemailer: A package for sending email from Node.js applications. This will be used to send confirmation emails, password reset emails, etc.
+
+
+
+
 
 
 
